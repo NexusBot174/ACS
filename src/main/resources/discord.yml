@@ -1,0 +1,16 @@
+# Configuración de notificaciones Discord para AegisGuard
+discord:
+  enabled: true
+  webhook-url: ""
+  # Configuración de los embeds de alerta
+  embed:
+    username: "AegisGuard Logs"
+    avatar-url: "https://i.imgur.com/example.png"
+    color: 16711680 # Color rojo en decimal
+    footer: "Sistema de Seguridad AegisGuard"
+  
+  # Campos personalizables
+  fields:
+    show-ip: true
+    show-brand: true
+    show-tps: true

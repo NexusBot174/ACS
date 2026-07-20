@@ -1,0 +1,116 @@
+# ========================================================================
+#                    AegisGuard Anticheat - V2 Premium
+# ========================================================================
+
+settings:
+  debug-mode: false
+
+punishments:
+  # Expulsa a los jugadores si su nivel de confianza supera el 85% para evitar daños (sin banearlos aun)
+  preventive-kick: false
+
+# ------------------------------------------------------------------------
+# INTEGRACION DISCORD (WEBHOOK & TELEMETRIA)
+# Usa /ag verify <url> in-game para configurar esto automaticamente
+# ------------------------------------------------------------------------
+discord:
+  webhook-url: "URL_AQUI"
+  enabled: true
+  # Formato del mensaje (Soporta Markdown de Discord).
+  message-format: "**[AegisGuard]** 🚨 Alerta de seguridad:"
+  # Coloca la ID de un Rol de Discord para que AegisGuard los mencione en Alertas Criticas (VL > 15%). 
+  # Dejalo en ROLE_ID_AQUI para desactivar el ping.
+  staff-role-id: "ROLE_ID_AQUI"
+
+alerts:
+  cooldown-ms: 1500
+
+# ------------------------------------------------------------------------
+# SCANNER DE CLIENTES (BRAND DETECTION)
+# ------------------------------------------------------------------------
+client-scanner:
+  enabled: true
+  blacklisted-brands:
+    - "wurst"
+    - "meteor"
+    - "liquidbounce"
+    - "aristois"
+    - "vape"
+  illegal-action: "ALERT_HOLD"
+  illegal-ban-command: "ban %player% AegisGuard: Modificacion ilegal interceptada en la red."
+
+# ------------------------------------------------------------------------
+# MODULOS DE DETECCION (CONFIDENCE SYSTEM V2)
+# Nota: El ban-threshold ahora se mide en Porcentaje de Confianza (%). 
+# 100.0 significa 100% Seguro de que es un Hack.
+# ------------------------------------------------------------------------
+checks:
+  speed:
+    enabled: true
+    ban-threshold: 100.0
+    ban-command: "ban %player% AegisGuard: Movimiento anormal detectado (Speed)."
+    
+  fly:
+    enabled: true
+    ban-threshold: 100.0
+    ban-command: "ban %player% AegisGuard: Vuelo no autorizado (Fly)."
+
+  jesus:
+    enabled: true
+    ban-threshold: 100.0
+    ban-command: "ban %player% AegisGuard: Fisicas de fluidos anormales (Jesus)."
+    
+  killaura:
+    enabled: true
+    ban-threshold: 100.0
+    ban-command: "ban %player% AegisGuard: Asistencia de Combate / Reach (KillAura)."
+
+  hitbox:
+    enabled: true
+    ban-threshold: 100.0
+    ban-command: "ban %player% AegisGuard: Manipulacion Geometrica (HitBox/MultiAura)."
+    
+  autoclicker:
+    enabled: true
+    ban-threshold: 100.0
+    ban-command: "ban %player% AegisGuard: Tasa de Clicks Inhumana (AutoClicker)."
+
+  aimbot:
+    enabled: true
+    ban-threshold: 100.0
+    ban-command: "ban %player% AegisGuard: Rotacion mecanica detectada (Aimbot)."
+
+  step:
+    enabled: true
+    ban-threshold: 100.0
+    ban-command: "ban %player% AegisGuard: Alteracion de gravedad (Step)."
+
+  spider:
+    enabled: true
+    ban-threshold: 100.0
+    ban-command: "ban %player% AegisGuard: Escalada de paredes ilegal (Spider)."
+
+  nofall:
+    enabled: true
+    ban-threshold: 100.0
+    ban-command: "ban %player% AegisGuard: Evasion de dano por caida (NoFall Spoof)."
+
+  criticals:
+    enabled: true
+    ban-threshold: 100.0
+    ban-command: "ban %player% AegisGuard: Paquetes de dano anómalos (Criticals)."
+
+  antiknockback:
+    enabled: true
+    ban-threshold: 100.0
+    ban-command: "ban %player% AegisGuard: Mitigacion de inercia (AntiKnockback)."
+
+  noslowdown:
+    enabled: true
+    ban-threshold: 100.0
+    ban-command: "ban %player% AegisGuard: Friccion nula por items (NoSlowdown)."
+
+  timer:
+    enabled: true
+    ban-threshold: 100.0
+    ban-command: "ban %player% AegisGuard: Modificacion temporal (Timer)."

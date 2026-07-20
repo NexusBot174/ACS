@@ -1,0 +1,30 @@
+name: AegisGuard
+version: 2.0.0-Premium
+main: com.camistudios.aegisguard.AegisGuard
+api-version: 1.20
+author: CamiStudios
+description: ᴍᴏᴛᴏʀ ᴀɴᴛɪᴄʜᴇᴀᴛ ᴘʀᴇᴍɪᴜᴍ ʙᴀsᴀᴅᴏ ᴇɴ ᴄᴏɴꜰɪᴀɴᴢᴀ ᴘᴏɴᴅᴇʀᴀᴅᴀ ʏ ᴛᴇʟᴇᴍᴇᴛʀɪᴀ ᴠᴇᴄᴛᴏʀɪᴀʟ.
+
+commands:
+  aegisguard:
+    description: ᴘᴀɴᴇʟ ᴘʀɪɴᴄɪᴘᴀʟ ᴅᴇ ᴀᴅᴍɪɴɪsᴛʀᴀᴄɪᴏɴ, ɢᴜɪ, ᴄᴏɴɢᴇʟᴀᴍɪᴇɴᴛᴏ, ᴍᴏᴅᴏ ᴇsᴘɪᴀ ʏ ᴡᴇʙʜᴏᴏᴋs.
+    aliases: [ag, aegis]
+    permission: aegisguard.admin
+    usage: /<command> [settings/verify/unverify/freeze/spy]
+
+permissions:
+  aegisguard.admin:
+    description: ᴏᴛᴏʀɢᴀ ᴀᴄᴄᴇsᴏ ᴛᴏᴛᴀʟ ᴀ ʟᴏs ᴄᴏᴍᴀɴᴅᴏs ᴀᴅᴍɪɴɪsᴛʀᴀᴛɪᴠᴏs, ɢᴜɪ ɪɴᴛᴇʀᴀᴄᴛɪᴠᴏ ʏ ʜᴇʀʀᴀᴍɪᴇɴᴛᴀs ᴅᴇ ᴍᴏᴅᴇʀᴀᴄɪᴏɴ.
+    default: op
+    
+  aegisguard.alerts:
+    description: ᴘᴇʀᴍɪᴛᴇ ʀᴇᴄɪʙɪʀ ʟᴀs ᴀʟᴇʀᴛᴀs ᴅᴇ ʜᴀᴄᴋs ʙᴀsɪᴄᴀs ᴇɴ ᴛɪᴇᴍᴘᴏ ʀᴇᴀʟ.
+    default: op
+
+  aegisguard.chat.alert:
+    description: ᴘᴇʀᴍɪᴛᴇ ʀᴇᴄɪʙɪʀ ᴇʟ ᴄᴀɴᴀʟ ᴀᴠᴀɴᴢᴀᴅᴏ ᴅᴇ ᴀʟᴇʀᴛᴀs ᴘʀᴇᴍɪᴜᴍ ᴍᴜʟᴛɪʟɪɴᴇᴀ ᴇɴ ᴇʟ ᴄʜᴀᴛ (ᴄʟɪᴄs ʏ ʜᴏᴠᴇʀs).
+    default: op
+
+  aegisguard.bypass:
+    description: ᴇxᴄʟᴜʏᴇ ᴘᴏʀ ᴄᴏᴍᴘʟᴇᴛᴏ ᴀ ᴜɴ ᴜsᴜᴀʀɪᴏ ᴏ ʀᴀɴɢᴏ ᴅᴇʟ ᴇsᴄᴀɴᴇᴏ ᴅᴇʟ ᴀɴᴛɪᴄʜᴇᴀᴛ.
+    default: op
